@@ -157,7 +157,8 @@
 	   res.status(404).send('Sorry, this is an invalid URL.');
 	});
 
-	var server = app.listen(8000, function () {  
+	const PORT = process.env.PORT || 8000;
+	var server = app.listen(PORT, function () {  
     var host = server.address().address  
       var port = server.address().port  
      console.log("Example app listening at http://%s:%s", host, port)  
