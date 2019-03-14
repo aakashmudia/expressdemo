@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html>  
+    <body>  
+	<p><%= data%></p>
+   <p>welcome to view page</p>
+   <p>User Details</p>
+   <table border='1px solid #ccc'>
+   
+   <thead>
+   <tr>
+   <td>Count</td>
+   <td>First Name</td>
+   <td>Last Name</td>
+   <td>Password</td>
+   <td>Action</td>
+   </tr>
+   </thead>
+   <tbody>
+   <% 
+   var cnt = 1;
+   data.forEach(function(user){ %>
+   <tr>
+   <td><%= cnt %></td>
+   <td><%= user.first_name %></td>
+   <td><%= user.last_name %></td>
+   <td><%= user.password %></td>
+   <td>
+		<a href="/edit/<%= user._id %>" >Edit</a>
+		<a href="/delete/<%= user._id %>">Delete</a>
+   </td>
+   </tr>
+   <% cnt=cnt+1;
+   }) %>
+  </tbody>
+   </table>
+   
+    </body>  
+    </html>  

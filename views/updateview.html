@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html>  
+    <body>  
+	
+   <p>welcome to Update page</p>
+   <p>Update User Details</p>
+   <form action="http://127.0.0.1:8000/updatedata/<%= data._id %>" method="POST">
+   <table border='1px solid #ccc'>
+   <tbody>
+   <tr>
+	  <td>First Name</td>
+	  <td><input type='text' name='first_name' value='<%= data.first_name %>' /></td> 
+  </tr>
+  <tr>
+	   <td>Last Name</td>
+	  <td><input type='text' name='last_name' value='<%= data.last_name %>' /></td> 
+  </tr>
+  <tr>
+	  <td>Password</td>
+	  <td><input type='text' name='password' value='<%= data.password %>' /></td> 
+  </tr>
+  <tr><td  colspan='2'><input type="submit" value="Update"> </td> </tr>
+  </tbody>
+   </table>
+   </form>
+    </body>  
+    </html>  
